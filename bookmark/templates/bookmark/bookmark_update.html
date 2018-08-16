@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}
+    Bookmark Write
+{% endblock %}
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %} <!-- 장고에서 임의로 자료를 만들고, 이를 검증하기 위해서 넣는 것 -->
+        {{ form.as_p }} <!-- 폼 태그 나오는걸 p 태그로 바꿀껴 -->
+        <input type="submit" class="btn btn-success" value="Update" />
+    </form>
+
+{% endblock %}
